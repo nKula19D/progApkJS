@@ -1,5 +1,10 @@
 # progApkJS
+
 tekst
-*pochylony tekst*
+_pochylony tekst_
 **pogrubiony tekst**
-***pogrubiono-pochylony tekst***
+**_pogrubiono-pochylony tekst_**
+
+1. HTML
+1. CSS
+   -SASS
