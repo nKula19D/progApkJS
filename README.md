@@ -7,4 +7,4 @@ _pochylony tekst_
 
 1. HTML
 1. CSS
-   -SASS
+    -SASS
