@@ -1,4 +1,6 @@
 # progApkJS
+# Zwykly znacznik (h1)
+## Mniejszy znacznik (h2)
 
 tekst
 _pochylony tekst_
@@ -7,4 +9,4 @@ _pochylony tekst_
 
 1. HTML
 1. CSS
-    -SASS
+    - SASS
