@@ -8,16 +8,29 @@ body
 {
     background-color:#FFE7E7;
 }
-li
-{
-    float: left;
-    height: 50px;
-    width: 16%;
-}
 nav
 {
     position: sticky;
     top: 0;
+}
+li
+{
+    float: left;
+    height: 50px;
+    width: 16.5%;
+    list-style-type: none;
+}
+#menu
+{
+    width: 70%;
+    height: 100%;
+}
+.poleTekstowe
+{
+    background-color: #F9D1D1;
+
+    width:150px;
+    height: 200px;
 }
 
 li:nth-child(1)
