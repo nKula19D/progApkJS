@@ -1,12 +1,13 @@
 const menuButton = document.querySelector('#menuButton');
 const menuWrapper = document.querySelector('#menuWrapper');
 const menu = document.querySelector('#menu');
-const content = document.querySelector('#content');
+let content = document.querySelector('#content');
 const navLiLastChild = document.querySelector('nav li:last-child');
+const dodajPoleTekstowe = document.querySelector('#dodajPoleTekstowe');
 let hideOrShow = 0;
 
 menuButton.addEventListener('click', menuShowHide);
-
+dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
 
 function menuShowHide()
 {
@@ -22,11 +23,18 @@ function menuShowHide()
     else {
         content.style.display = 'block';
         menuWrapper.style.width = '100%';
-        menuWrapper.style.height = '10%';
+        menuWrapper.style.height = '8%';
         menu.style.display = 'none';
         menuButton.style.transform = 'rotate(0deg)';
         navLiLastChild.style.borderRadius = '0';
         hideOrShow = 0;
     }
+    
+}
+
+function dodajTekstowe() {
+    let pole = document.createElement('div');
+    pole.className = "poleTekstowe";
+    content.appendChild(pole);
     
 }
