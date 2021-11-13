@@ -34,7 +34,11 @@ function menuShowHide()
 
 function dodajTekstowe() {
     let pole = document.createElement('div');
+    let textArea = document.createElement('textarea');
+    textArea.className = "textAreaPole";
     pole.className = "poleTekstowe";
+    pole.appendChild(textArea);
     content.appendChild(pole);
+    
     
 }
