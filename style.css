@@ -20,8 +20,7 @@ ul
     display:flex;
 }
 li{
-    
-
+    text-align:center;
     height: 70px;
     width: 16.65%;
     list-style-type: none;
@@ -29,8 +28,8 @@ li{
 
 .textAreaPole {
     resize: none;
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
     border: none;
     background-color: #FFE7E7;
 }
@@ -52,7 +51,10 @@ li{
 }
 
 .poleTekstowe {
-    
+    resize:both;
+    overflow:hidden;
+
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
     margin: 15px;
     border-radius: 15px;
     border: solid #F9D1D1 20px;
@@ -60,8 +62,9 @@ li{
     width: 300px;
     height: 450px;
 }
-/*zrobic zawijanie w menu*/
 #menuContent{
+    display:flex;
+    flex-wrap:wrap;
     padding-top:10px;
     height:99%;
     width:100%;
@@ -73,6 +76,7 @@ li{
 
 #menuButton
 {
+    margin-left:15px;
     margin-top:7px;
     margin-right: 14px;
     border:none;
@@ -83,19 +87,27 @@ li{
 }
 
 #dodajPoleTekstowe {
+
+    margin-left:27px;
+    margin-top:7px;
     border: none;
-    width: 91px;
-    height: 91px;
+    width: 54px;
+    height: 54px;
     background: url('icons/plus.png') no-repeat;
 }
-#content {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    height: 88%;
-    overflow-y: scroll;
-    overflow: auto;
-}
+
+    #dodajPoleTekstowe:hover{
+        transform:scale(1.1);
+    }
+
+    #content {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        height: 88%;
+        overflow-y: scroll;
+        overflow: auto;
+    }
 
 li:nth-child(1){
    background-color: #0B1354; 

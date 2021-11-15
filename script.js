@@ -1,13 +1,13 @@
+
 const menuButton = document.querySelector('#menuButton');
 const menuWrapper = document.querySelector('#menuWrapper');
 const menu = document.querySelector('#menu');
+const menuContent = document.querySelector('#menuContent');
 let content = document.querySelector('#content');
 const navLiLastChild = document.querySelector('nav li:last-child');
-const dodajPoleTekstowe = document.querySelector('#dodajPoleTekstowe');
 let hideOrShow = 0;
 
 menuButton.addEventListener('click', menuShowHide);
-dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
 
 function menuShowHide()
 {
@@ -21,7 +21,7 @@ function menuShowHide()
         hideOrShow = 1;
     }
     else {
-        content.style.display = 'block';
+        content.style.display = 'flex';
         menuWrapper.style.width = '100%';
         menuWrapper.style.height = '8%';
         menu.style.display = 'none';
@@ -32,13 +32,3 @@ function menuShowHide()
     
 }
 
-function dodajTekstowe() {
-    let pole = document.createElement('div');
-    let textArea = document.createElement('textarea');
-    textArea.className = "textAreaPole";
-    pole.className = "poleTekstowe";
-    pole.appendChild(textArea);
-    content.appendChild(pole);
-    
-    
-}
