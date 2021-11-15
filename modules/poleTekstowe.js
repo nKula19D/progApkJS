@@ -24,12 +24,14 @@ function showTekstowe() {
         for (let i = 0; i < iloscPol; i++) {
             let pole = document.querySelectorAll('.poleTekstowe')[i];
             pole.style.resize = 'none';
+            console.log("wykonano "+i) //poprawic
         }
     }
     else {
         for (let i = 0; i < iloscPol; i++) {
             let pole = document.querySelectorAll('.poleTekstowe')[i];
             pole.style.resize = 'both';
+            console.log("wykonano "+i)
         }
     }
 }
