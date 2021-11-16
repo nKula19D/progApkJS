@@ -20,7 +20,7 @@ function menuShowHide()
         menuDodajButton.style.display = 'inline';
         menuUsunButton.style.display = 'inline';
         menuPinButton.style.display = 'inline';
-        menuWrapper.style.width = '70%';
+        menuWrapper.style.width = '70%';//dodac media query
         menu.style.display = 'block';
         menuButton.style.transform = 'rotate(180deg)';
         navLiLastChild.style.borderRadius = '0px 15px 0px 0px';
