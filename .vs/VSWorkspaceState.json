@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\icons",
-    "\\modules"
+    "\\modules",
+    "\\modules\\poleTekstowe"
   ],
-  "SelectedNode": "\\modules\\poleTekstowe.js",
+  "SelectedNode": "\\modules\\poleTekstowe\\poleTekstowe.js",
   "PreviewInSolutionExplorer": false
 }

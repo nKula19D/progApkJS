@@ -20,11 +20,11 @@ function menuShowHide()
         menuDodajButton.style.display = 'inline';
         menuUsunButton.style.display = 'inline';
         menuPinButton.style.display = 'inline';
-        content.style.display = 'none';
         menuWrapper.style.width = '70%';
         menu.style.display = 'block';
         menuButton.style.transform = 'rotate(180deg)';
         navLiLastChild.style.borderRadius = '0px 15px 0px 0px';
+        menuContent.insertAdjacentElement('afterbegin', content);
         hideOrShow = 1;
     }
     else {
@@ -36,6 +36,8 @@ function menuShowHide()
         menu.style.display = 'none';
         menuButton.style.transform = 'rotate(0deg)';
         navLiLastChild.style.borderRadius = '0';
+        menuWrapper.insertAdjacentElement('afterend', content);
+
         hideOrShow = 0;
     }
     

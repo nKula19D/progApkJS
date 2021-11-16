@@ -1,5 +1,6 @@
 let iloscPol = 0;
 
+let listaPol = {};
 let przycisk = document.createElement('button');
 przycisk.id = 'dodajPoleTekstowe';
 przycisk.innerText = "Dodaj pole tekstowe";
@@ -9,7 +10,7 @@ const dodajPoleTekstowe = document.querySelector('#dodajPoleTekstowe');
 
 
 dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
-menuButton.addEventListener('click', showTekstowe);
+//menuButton.addEventListener('click', showTekstowe);
 
 
 
@@ -20,27 +21,25 @@ function dodajTekstowe() {
     pole.className = "poleTekstowe";
     pole.appendChild(textArea);
     content.appendChild(pole);
-    let poleMenu = pole.cloneNode(true);
-    menuContent.appendChild(poleMenu);
     iloscPol++;
 
 
 }
 
 function showTekstowe() {
-    //usunac resize z poltekstowych w menu
+    //usunac resize z poltekstowych w menu nie dziala \/
     if (hideOrShow == 0) {
         for (let i = 0; i < iloscPol; i++) {
-            let pole = document.querySelectorAll('.poleTekstowe')[i];
-            pole.style.resize = 'none';
-            console.log("wykonano "+i) //poprawic
+            let pole = document.querySelectorAll('.poleTekstowe');
+            pole[i].style.resize = 'none';
+            console.log("wykonano if"+i) 
         }
     }
     else {
         for (let i = 0; i < iloscPol; i++) {
-            let pole = document.querySelectorAll('.poleTekstowe')[i];
-            pole.style.resize = 'both';
-            console.log("wykonano "+i)
+            let pole = document.querySelectorAll('.poleTekstowe');
+            pole[i].style.resize = 'both';
+            console.log("wykonano else"+i)
         }
     }
 }
