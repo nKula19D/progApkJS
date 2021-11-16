@@ -1,8 +1,16 @@
-const dodajPoleTekstowe = document.querySelector('#dodajPoleTekstowe');
 let iloscPol = 0;
+
+let przycisk = document.createElement('button');
+przycisk.id = 'dodajPoleTekstowe';
+przycisk.innerText = "Dodaj pole tekstowe";
+menuDodajContent.appendChild(przycisk);
+
+const dodajPoleTekstowe = document.querySelector('#dodajPoleTekstowe');
+
 
 dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
 menuButton.addEventListener('click', showTekstowe);
+
 
 
 function dodajTekstowe() {
@@ -20,6 +28,7 @@ function dodajTekstowe() {
 }
 
 function showTekstowe() {
+    //usunac resize z poltekstowych w menu
     if (hideOrShow == 0) {
         for (let i = 0; i < iloscPol; i++) {
             let pole = document.querySelectorAll('.poleTekstowe')[i];

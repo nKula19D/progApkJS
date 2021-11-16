@@ -1,4 +1,6 @@
 const menuDodajButton = document.querySelector('#dodaj');
+const menuUsunButton = document.querySelector('#usun');
+const menuPinButton = document.querySelector('#pin');
 const menuDodajContent = document.querySelector('#menuDodajContent');
 const menuButton = document.querySelector('#menuButton');
 const menuWrapper = document.querySelector('#menuWrapper');
@@ -16,9 +18,10 @@ function menuShowHide()
 {
     if (hideOrShow == 0) {
         menuDodajButton.style.display = 'inline';
+        menuUsunButton.style.display = 'inline';
+        menuPinButton.style.display = 'inline';
         content.style.display = 'none';
         menuWrapper.style.width = '70%';
-        menuWrapper.style.height = '100%';
         menu.style.display = 'block';
         menuButton.style.transform = 'rotate(180deg)';
         navLiLastChild.style.borderRadius = '0px 15px 0px 0px';
@@ -26,9 +29,10 @@ function menuShowHide()
     }
     else {
         menuDodajButton.style.display = 'none';
+        menuUsunButton.style.display = 'none';
+        menuPinButton.style.display = 'none';
         content.style.display = 'flex';
         menuWrapper.style.width = '100%';
-        menuWrapper.style.height = '8%';
         menu.style.display = 'none';
         menuButton.style.transform = 'rotate(0deg)';
         navLiLastChild.style.borderRadius = '0';
