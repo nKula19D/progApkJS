@@ -1,3 +1,14 @@
+:root {
+    --bg-color: #FFE7E7;
+    --first-color: #F9D1D1;
+    --second-color: #FFA4B6;
+    --third-color: #F765A3;
+    --fourth-color: #A155B9;
+    --fifth-color: #165BA9;
+    --sixth-color: #0B1354;
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -8,7 +19,7 @@ html {
 body{
     overflow:hidden;
     height:100%;
-    background-color:#FFE7E7;
+    background-color: var(--bg-color);
 }
 nav{
     position: sticky;
@@ -101,42 +112,42 @@ li {
     overflow: auto;
 }
 
-li:nth-child(1){
-   background-color: #0B1354; 
+li:nth-child(1) {
+    background-color: var(--sixth-color);
 }
-li:nth-child(2){
-   background-color: #165BA9; 
+li:nth-child(2) {
+    background-color: var(--fifth-color);
 }
-li:nth-child(3){
-   background-color: #A155B9; 
+li:nth-child(3) {
+    background-color: var(--fourth-color);
 }
-li:nth-child(4){
-   background-color: #F765A3; 
+li:nth-child(4) {
+    background-color: var(--third-color);
 }
-li:nth-child(5){
-   background-color: #FFA4B6; 
+li:nth-child(5) {
+    background-color: var(--second-color);
 }
-li:nth-child(6){
-   background-color: #F9D1D1; 
+li:nth-child(6) {
+    background-color: var(--first-color);
 }
 
 #content::-webkit-scrollbar{
     width:17px;
 }
 #content::-webkit-scrollbar-track {
-    background-color: #F9D1D1;
+    background-color: var(--first-color);
     border-radius: 15px;
 }
-#content::-webkit-scrollbar-thumb{
-    border-radius:15px;
-    border:solid #F9D1D1 4px;
-    background-color:#FFA4B6;
+#content::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    border: solid var(--first-color) 4px;
+    background-color: #FFA4B6;
 }
 
 
 #menuButton:hover{
     /*nie dziala po schowaniu contentu*/
-    transform:scale(1.2);
+    transform:scale(1.2)!important;
 }
 
 #dodaj:hover, #usun:hover, #pin:hover{
