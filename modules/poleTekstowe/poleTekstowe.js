@@ -6,10 +6,17 @@ przycisk.id = 'dodajPoleTekstowe';
 przycisk.innerText = "Dodaj pole tekstowe";
 menuDodajContent.appendChild(przycisk);
 
+let przycisk2 = document.createElement('button');
+przycisk2.id = 'usunPoleTekstowe';
+przycisk2.innerText = "Usun pole tekstowe";
+menuUsunContent.appendChild(przycisk2);
+
 const dodajPoleTekstowe = document.querySelector('#dodajPoleTekstowe');
+const usunPoleTekstowe = document.querySelector('#usunPoleTekstowe');
 
 
 dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
+usunPoleTekstowe.addEventListener('click', usunTekstowe);
 //menuButton.addEventListener('click', showTekstowe);
 
 
@@ -22,9 +29,14 @@ function dodajTekstowe() {
     pole.appendChild(textArea);
     content.appendChild(pole);
     iloscPol++;
-
-
 }
+
+function usunTekstowe() {
+    let pole = content.querySelectorAll(".poleTekstowe");
+    content.removeChild(pole[iloscPol - 1]);
+    iloscPol--;
+}
+
 
 function showTekstowe() {
     //usunac resize z poltekstowych w menu nie dziala \/
@@ -43,4 +55,6 @@ function showTekstowe() {
         }
     }
 }
+
+
 

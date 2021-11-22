@@ -2,6 +2,7 @@ const menuDodajButton = document.querySelector('#dodaj');
 const menuUsunButton = document.querySelector('#usun');
 const menuPinButton = document.querySelector('#pin');
 const menuDodajContent = document.querySelector('#menuDodajContent');
+const menuUsunContent = document.querySelector('#menuUsunContent');
 const menuButton = document.querySelector('#menuButton');
 const menuWrapper = document.querySelector('#menuWrapper');
 const menu = document.querySelector('#menu');
@@ -13,6 +14,7 @@ let settingsShow = 1;
 
 menuButton.addEventListener('click', menuShowHide);
 menuDodajButton.addEventListener('click', addSettings);
+menuUsunButton.addEventListener('click', removeSettings)
 
 function menuShowHide()
 {
@@ -47,12 +49,35 @@ function addSettings() {
     if (settingsShow == 1) {
         menuDodajContent.style.display = 'flex';
         menuContent.style.display = 'none';
+        menuUsunButton.style.display = 'none';
+        menuPinButton.style.display = 'none';
 
         settingsShow = 0;
     }
     else {
         menuDodajContent.style.display = 'none';
         menuContent.style.display = 'flex';
+        menuUsunButton.style.display = 'inline';
+        menuPinButton.style.display = 'inline';
+
+        settingsShow = 1;
+    }
+}
+function removeSettings() {
+    if (settingsShow == 1) {
+        menuUsunContent.style.display = 'flex';
+        menuContent.style.display = 'none';
+        menuDodajButton.style.display = 'none';
+        menuPinButton.style.display = 'none';
+
+        settingsShow = 0;
+    }
+    else {
+        menuUsunContent.style.display = 'none';
+        menuContent.style.display = 'flex';
+        menuDodajButton.style.display = 'inline';
+        menuPinButton.style.display = 'inline';
+
         settingsShow = 1;
     }
 }
