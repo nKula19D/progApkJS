@@ -9,6 +9,10 @@
 }
 
 
+nav{
+    z-index:10;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -32,7 +36,6 @@ ul {
 
 }
 li {
-    /*box shadow sie nie pokazuje po schowaniu contenu*/
     width:1000px;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
     text-align: center;
@@ -40,14 +43,11 @@ li {
 }
 
 
-#menu{
+#menu {
     position: absolute;
-    top:90px;
-    
-    
-    display:none;
-    background-color: #FFA4B6;
-   
+    top: 90px;
+    display: none;
+    background-color: var(--second-color);
     width: 70%;
     height: 90%;
 }
@@ -61,8 +61,8 @@ li {
 #menuContent {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10px;
-    height: 99%;
+    margin-top: 10px;
+    height: 98%;
     width: 100%;
     overflow-y: hidden;
 }
@@ -77,7 +77,7 @@ li {
     
     background: url('icons/menuButton.png') no-repeat;
 }
-#dodaj, #usun, #pin {
+#dodaj, #usun, #pin, #paleta {
     margin-top:12px;
     display:none;
     border: none;
@@ -93,6 +93,10 @@ li {
 #pin{
     background:url('icons/pin.png') no-repeat;
 }
+#paleta {
+    background: url('icons/palette.png') no-repeat;
+}
+
 
 #menuDodajContent, #menuUsunContent {
     display: none;
@@ -110,6 +114,15 @@ li {
     height: 97%;
     overflow-y: scroll;
     overflow: auto;
+}
+
+#paletaChange {
+    display:none;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    border: solid var(--fist-color) 20px;
+    width: 70%;
+    height: 90%;
 }
 
 li:nth-child(1) {
@@ -147,9 +160,9 @@ li:nth-child(6) {
 
 #menuButton:hover{
     /*nie dziala po schowaniu contentu*/
-    transform:scale(1.2)!important;
+    transform:scale(1.2);
 }
 
-#dodaj:hover, #usun:hover, #pin:hover{
+#dodaj:hover, #usun:hover, #pin:hover, #paleta:hover{
     transform:scale(1.1);
 }

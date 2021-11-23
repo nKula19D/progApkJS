@@ -15,6 +15,7 @@ const dodajPoleTekstowe = document.querySelector('#dodajPoleTekstowe');
 const usunPoleTekstowe = document.querySelector('#usunPoleTekstowe');
 
 
+
 dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
 usunPoleTekstowe.addEventListener('click', usunTekstowe);
 //menuButton.addEventListener('click', showTekstowe);
