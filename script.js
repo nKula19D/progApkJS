@@ -1,7 +1,11 @@
+const root = document.documentElement;
 const menuDodajButton = document.querySelector('#dodaj');
 const menuUsunButton = document.querySelector('#usun');
 const menuPinButton = document.querySelector('#pin');
 const menuPaletaButton = document.querySelector('#paleta');
+const inputs = document.querySelectorAll('input[type=color]');
+const zast = document.querySelector('#zast');
+
 
 const paletaChange = document.querySelector('#paletaChange');
 const menuDodajContent = document.querySelector('#menuDodajContent');
@@ -15,10 +19,12 @@ const navLiLastChild = document.querySelector('nav li:last-child');
 let hideOrShow = 0;
 let settingsShow = 1;
 
+zast.addEventListener('click', zastosuj);
 menuButton.addEventListener('click', menuShowHide);
 menuDodajButton.addEventListener('click', addSettings);
 menuUsunButton.addEventListener('click', removeSettings)
 menuPaletaButton.addEventListener('click', paletaSettings);
+
 
 function menuShowHide()
 {
@@ -96,6 +102,7 @@ function removeSettings() {
 function paletaSettings() {
     if (settingsShow == 1) {
         paletaChange.style.display = 'flex';
+        content.style.display = 'none';
         menuUsunButton.style.display = 'none';
         menuDodajButton.style.display = 'none';
         menuPinButton.style.display = 'none';
@@ -104,10 +111,21 @@ function paletaSettings() {
     }
     else {
         paletaChange.style.display = 'none';
+        content.style.display = 'flex';
         menuUsunButton.style.display = 'inline';
         menuDodajButton.style.display = 'inline';
         menuPinButton.style.display = 'inline';
 
         settingsShow = 1;
     }
+}
+
+function zastosuj() {
+    root.style.setProperty('--bg-color', inputs[0].value);
+    root.style.setProperty('--first-color', inputs[1].value);
+    root.style.setProperty('--second-color', inputs[2].value);
+    root.style.setProperty('--third-color', inputs[3].value);
+    root.style.setProperty('--fourth-color', inputs[4].value);
+    root.style.setProperty('--fifth-color', inputs[5].value);
+    root.style.setProperty('--sixth-color', inputs[6].value);
 }

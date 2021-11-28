@@ -18,7 +18,7 @@ const usunPoleTekstowe = document.querySelector('#usunPoleTekstowe');
 
 dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
 usunPoleTekstowe.addEventListener('click', usunTekstowe);
-//menuButton.addEventListener('click', showTekstowe);
+menuButton.addEventListener('click', showTekstowe);
 
 
 
@@ -41,18 +41,17 @@ function usunTekstowe() {
 
 function showTekstowe() {
     //usunac resize z poltekstowych w menu nie dziala \/
+    const pole = document.querySelectorAll('.poleTekstowe');
     if (hideOrShow == 0) {
+        
         for (let i = 0; i < iloscPol; i++) {
-            let pole = document.querySelectorAll('.poleTekstowe');
             pole[i].style.resize = 'none';
-            console.log("wykonano if"+i) 
         }
     }
     else {
         for (let i = 0; i < iloscPol; i++) {
-            let pole = document.querySelectorAll('.poleTekstowe');
+            
             pole[i].style.resize = 'both';
-            console.log("wykonano else"+i)
         }
     }
 }
