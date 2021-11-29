@@ -1,4 +1,5 @@
 let iloscPol = 0;
+let showTekstowePin = 1;
 
 let listaPol = {};
 let przycisk = document.createElement('button');
@@ -18,7 +19,7 @@ const usunPoleTekstowe = document.querySelector('#usunPoleTekstowe');
 
 dodajPoleTekstowe.addEventListener('click', dodajTekstowe);
 usunPoleTekstowe.addEventListener('click', usunTekstowe);
-menuButton.addEventListener('click', showTekstowe);
+menuPinButton.addEventListener('click', showTekstowe);
 
 
 
@@ -42,17 +43,19 @@ function usunTekstowe() {
 function showTekstowe() {
     
     const pole = document.querySelectorAll('.poleTekstowe');
-    if (hideOrShow == 0) {
+    if (showTekstowePin == 0) {
         
         for (let i = 0; i < iloscPol; i++) {
             pole[i].style.resize = 'none';
         }
+        showTekstowePin = 1;
     }
     else {
         for (let i = 0; i < iloscPol; i++) {
             
             pole[i].style.resize = 'both';
         }
+        showTekstowePin = 0;
     }
 }
 
