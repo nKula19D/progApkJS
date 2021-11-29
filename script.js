@@ -1,4 +1,6 @@
 const root = document.documentElement;
+const screen = window.matchMedia("(max-width: 600px)")
+
 const menuDodajButton = document.querySelector('#dodaj');
 const menuUsunButton = document.querySelector('#usun');
 const menuPinButton = document.querySelector('#pin');
@@ -29,30 +31,34 @@ menuPaletaButton.addEventListener('click', paletaSettings);
 function menuShowHide()
 {
     if (hideOrShow == 0) {
-        menuDodajButton.style.display = 'inline';
-        menuUsunButton.style.display = 'inline';
-        menuPaletaButton.style.display = 'inline';
-        menuPinButton.style.display = 'inline';
-        menuPaletaButton.style.display = 'inline';
-        menuWrapper.style.width = '70%';
-        menu.style.display = 'block';
-        menuButton.style.transform = 'rotate(180deg)';
-        navLiLastChild.style.borderRadius = '0px 15px 0px 0px';
-        menuContent.insertAdjacentElement('afterbegin', content);
+        if (screen.matches) {
+            maxWidth600Show();
+        }
+        
+        else {
+            menuDodajButton.style.display = 'inline';
+            menuUsunButton.style.display = 'inline';
+            menuPaletaButton.style.display = 'inline';
+            menuPinButton.style.display = 'inline';
+            menuPaletaButton.style.display = 'inline';
+            menuWrapper.style.width = '70%';
+            menu.style.display = 'block';
+            menuButton.style.transform = 'rotate(180deg)';
+            navLiLastChild.style.borderRadius = '0px 15px 0px 0px';
+            menuContent.insertAdjacentElement('afterbegin', content);
+            
+        }
         hideOrShow = 1;
     }
     else {
-        menuDodajButton.style.display = 'none';
-        menuUsunButton.style.display = 'none';
-        menuPaletaButton.style.display = 'none';
-        menuPinButton.style.display = 'none';
-        menuPaletaButton.style.display = 'none';
-        content.style.display = 'flex';
-        menuWrapper.style.width = '100%';
-        menu.style.display = 'none';
-        menuButton.style.transform = 'rotate(0deg)';
-        navLiLastChild.style.borderRadius = '0';
-        menuWrapper.insertAdjacentElement('afterend', content);
+        if (screen.matches) {
+            menuHide();
+            menu.style.width = '100%';
+        }
+        else {
+            menuHide()
+        }
+        
 
         hideOrShow = 0;
     }
@@ -128,4 +134,32 @@ function zastosuj() {
     root.style.setProperty('--fourth-color', inputs[4].value);
     root.style.setProperty('--fifth-color', inputs[5].value);
     root.style.setProperty('--sixth-color', inputs[6].value);
+}
+
+function maxWidth600Show() {
+    menuDodajButton.style.display = 'inline';
+    menuUsunButton.style.display = 'inline';
+    menuPaletaButton.style.display = 'inline';
+    menuPinButton.style.display = 'inline';
+    menuPaletaButton.style.display = 'inline';
+    menuWrapper.style.width = '100%';
+    menu.style.width = '100%';
+    menu.style.display = 'block';
+    menuButton.style.transform = 'rotate(180deg)';
+    navLiLastChild.style.borderRadius = '0px 15px 0px 0px';
+    menuContent.insertAdjacentElement('afterbegin', content);
+    hideOrShow = 1;
+}
+function menuHide() {
+    menuDodajButton.style.display = 'none';
+        menuUsunButton.style.display = 'none';
+        menuPaletaButton.style.display = 'none';
+        menuPinButton.style.display = 'none';
+        menuPaletaButton.style.display = 'none';
+        content.style.display = 'flex';
+        menuWrapper.style.width = '100%';
+        menu.style.display = 'none';
+        menuButton.style.transform = 'rotate(0deg)';
+        navLiLastChild.style.borderRadius = '0';
+        menuWrapper.insertAdjacentElement('afterend', content);
 }

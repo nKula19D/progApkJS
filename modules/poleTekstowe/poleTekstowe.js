@@ -40,7 +40,7 @@ function usunTekstowe() {
 
 
 function showTekstowe() {
-    //usunac resize z poltekstowych w menu nie dziala \/
+    
     const pole = document.querySelectorAll('.poleTekstowe');
     if (hideOrShow == 0) {
         
