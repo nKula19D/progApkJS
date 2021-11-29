@@ -64,7 +64,6 @@ function menuShowHide()
     }
     
 }
-/*skrocic do jednej funkcji \/*/ 
 function addSettings() {
     if (settingsShow == 1) {
         menuDodajContent.style.display = 'flex';
@@ -125,7 +124,6 @@ function paletaSettings() {
         settingsShow = 1;
     }
 }
-
 function zastosuj() {
     root.style.setProperty('--bg-color', inputs[0].value);
     root.style.setProperty('--first-color', inputs[1].value);
@@ -135,7 +133,6 @@ function zastosuj() {
     root.style.setProperty('--fifth-color', inputs[5].value);
     root.style.setProperty('--sixth-color', inputs[6].value);
 }
-
 function maxWidth600Show() {
     menuDodajButton.style.display = 'inline';
     menuUsunButton.style.display = 'inline';

@@ -175,7 +175,6 @@ li:nth-child(6) {
 
 
 #menuButton:hover{
-    /*nie dziala po schowaniu contentu*/
     transform:scale(1.2);
 }
 
